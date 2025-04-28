@@ -3,64 +3,64 @@ import { useState, useEffect, createContext, useContext, ReactNode } from 'react
 
 // Translations
 export const translations = {
-  en: {
+  zh: {
     // Navigation
-    home: "Home",
-    product: "Product",
-    services: "Services",
-    about: "About",
-    contact: "Contact",
+    home: "首页",
+    product: "产品",
+    services: "服务",
+    about: "关于",
+    contact: "联系",
     
     // Hero
-    heroTitle: "Staff Management Made Simple",
-    heroSubtitle: "The complete solution for French entrepreneurs to manage staff, accounts, taxes and HR.",
-    heroCta: "Get Started",
-    learnMore: "Learn More",
+    heroTitle: "简化员工管理",
+    heroSubtitle: "为法国企业家提供的完整解决方案，用于管理员工、账户、税务和人力资源。",
+    heroCta: "开始使用",
+    learnMore: "了解更多",
     
     // Product
-    productTitle: "One Platform, Multiple Solutions",
-    productDesc: "StaffCompass combines powerful tools to simplify your business operations.",
-    feature1Title: "Accounting",
-    feature1Desc: "Automate bookkeeping and financial reporting with precision.",
-    feature2Title: "Tax Management",
-    feature2Desc: "Stay compliant with French tax regulations effortlessly.",
-    feature3Title: "HR Management",
-    feature3Desc: "Handle contracts, leave, and employee documentation with ease.",
-    feature4Title: "Payroll",
-    feature4Desc: "Process accurate payroll calculations and payments on schedule.",
+    productTitle: "一个平台，多种解决方案",
+    productDesc: "StaffCompass 结合强大的工具，简化您的业务运营。",
+    feature1Title: "会计",
+    feature1Desc: "精确地自动化簿记和财务报告。",
+    feature2Title: "税务管理",
+    feature2Desc: "轻松遵守法国税务法规。",
+    feature3Title: "人力资源管理",
+    feature3Desc: "轻松处理合同、休假和员工文档。",
+    feature4Title: "工资管理",
+    feature4Desc: "按计划进行准确的工资计算和支付。",
     
     // Services
-    servicesTitle: "Our Services",
-    servicesDesc: "We provide everything French entrepreneurs need to manage their staff efficiently.",
-    service1Title: "Setup & Onboarding",
-    service1Desc: "Get your team set up with personalized onboarding support.",
-    service2Title: "Ongoing Support",
-    service2Desc: "Access to specialists for any questions or issues that arise.",
-    service3Title: "Custom Implementation",
-    service3Desc: "Tailored solutions to match your specific business needs.",
+    servicesTitle: "我们的服务",
+    servicesDesc: "我们提供法国企业家高效管理员工所需的一切。",
+    service1Title: "设置与入职",
+    service1Desc: "通过个性化的入职支持为您的团队提供服务。",
+    service2Title: "持续支持",
+    service2Desc: "获得专家支持，解答任何问题或解决出现的问题。",
+    service3Title: "定制实施",
+    service3Desc: "量身定制的解决方案，满足您的特定业务需求。",
     
     // About
-    aboutTitle: "About StaffCompass",
-    aboutDesc: "Created by entrepreneurs for entrepreneurs, StaffCompass understands the unique challenges of French businesses.",
-    aboutContent: "Founded in 2023, we've helped hundreds of French businesses streamline their operations and focus on growth. Our team combines expertise in French business regulations, HR management, and technology to deliver a solution that truly works for you.",
-    team: "Our Team",
+    aboutTitle: "关于 StaffCompass",
+    aboutDesc: "由企业家为企业家创建，StaffCompass 了解法国企业的独特挑战。",
+    aboutContent: "成立于2023年，我们已帮助数百家法国企业精简运营并专注于增长。我们的团队结合了法国商业法规、人力资源管理和技术方面的专业知识，为您提供真正有效的解决方案。",
+    team: "我们的团队",
     
     // Contact
-    contactTitle: "Get In Touch",
-    contactDesc: "Have questions? We're here to help.",
-    nameLabel: "Name",
-    emailLabel: "Email",
-    messageLabel: "Message",
-    submitButton: "Send Message",
-    contactInfo: "Contact Information",
-    address: "123 Rue de Rivoli, Paris, France",
+    contactTitle: "联系我们",
+    contactDesc: "有问题？我们随时为您提供帮助。",
+    nameLabel: "姓名",
+    emailLabel: "电子邮件",
+    messageLabel: "留言",
+    submitButton: "发送留言",
+    contactInfo: "联系信息",
+    address: "法国巴黎里沃利大街123号",
     phone: "+33 1 23 45 67 89",
     emailAddress: "contact@staffcompass.com",
     
     // Footer
-    copyright: "© 2025 StaffCompass. All rights reserved.",
-    termsLink: "Terms of Service",
-    privacyLink: "Privacy Policy",
+    copyright: "© 2025 StaffCompass 版权所有。",
+    termsLink: "服务条款",
+    privacyLink: "隐私政策",
   },
   fr: {
     // Navigation
@@ -123,8 +123,8 @@ export const translations = {
   }
 };
 
-type LanguageType = 'en' | 'fr';
-type TranslationsType = typeof translations.en;
+type LanguageType = 'zh' | 'fr';
+type TranslationsType = typeof translations.zh;
 
 interface LanguageContextType {
   language: LanguageType;
@@ -140,7 +140,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Load language preference from localStorage on mount
   useEffect(() => {
     const savedLang = localStorage.getItem('language') as LanguageType | null;
-    if (savedLang && (savedLang === 'en' || savedLang === 'fr')) {
+    if (savedLang && (savedLang === 'zh' || savedLang === 'fr')) {
       setLanguage(savedLang);
     }
   }, []);

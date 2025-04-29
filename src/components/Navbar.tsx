@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { LanguageToggle } from "./LanguageToggle";
@@ -36,19 +35,19 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex justify-between items-center py-5">
-          <a href="#home" className="text-2xl font-bold flex items-center">
+        <div className="flex justify-between items-center py-10">
+          <a href="#home" className="text-4xl font-bold flex items-center">
             <span className="gradient-text">Buroly</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
+            <div className="flex items-center space-x-12">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-medium text-sm hover:text-accent transition-colors"
+                  className="font-medium text-lg hover:text-accent transition-colors"
                 >
                   {link.name}
                 </a>
@@ -67,7 +66,7 @@ export const Navbar = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-10 h-10"
             >
               {mobileMenuOpen ? (
                 <path
@@ -90,19 +89,19 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md py-4 px-4 border-t rounded-b-2xl shadow-lg">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden bg-white/95 backdrop-blur-md py-6 px-6 border-t rounded-b-2xl shadow-lg">
+            <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-medium text-base"
+                  className="font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="pt-2">
+              <div className="pt-4">
                 <LanguageToggle />
               </div>
             </div>

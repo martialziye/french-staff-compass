@@ -19,7 +19,7 @@ export const translations = {
     
     // Product
     productTitle: "一个平台，多种解决方案",
-    productDesc: "StaffCompass 结合强大的工具，简化您的业务运营。",
+    productDesc: "Buroly 结合强大的工具，简化您的业务运营。",
     feature1Title: "会计",
     feature1Desc: "精确地自动化簿记和财务报告。",
     feature2Title: "税务管理",
@@ -40,8 +40,8 @@ export const translations = {
     service3Desc: "量身定制的解决方案，满足您的特定业务需求。",
     
     // About
-    aboutTitle: "关于 StaffCompass",
-    aboutDesc: "由企业家为企业家创建，StaffCompass 了解法国企业的独特挑战。",
+    aboutTitle: "关于 Buroly",
+    aboutDesc: "由企业家为企业家创建，Buroly 了解法国企业的独特挑战。",
     aboutContent: "成立于2023年，我们已帮助数百家法国企业精简运营并专注于增长。我们的团队结合了法国商业法规、人力资源管理和技术方面的专业知识，为您提供真正有效的解决方案。",
     team: "我们的团队",
     
@@ -55,10 +55,10 @@ export const translations = {
     contactInfo: "联系信息",
     address: "法国巴黎里沃利大街123号",
     phone: "+33 1 23 45 67 89",
-    emailAddress: "contact@staffcompass.com",
+    emailAddress: "contact@Buroly.com",
     
     // Footer
-    copyright: "© 2025 StaffCompass 版权所有。",
+    copyright: "© 2025 Buroly 版权所有。",
     termsLink: "服务条款",
     privacyLink: "隐私政策",
   },
@@ -78,7 +78,7 @@ export const translations = {
     
     // Product
     productTitle: "Une Plateforme, Plusieurs Solutions",
-    productDesc: "StaffCompass combine des outils puissants pour simplifier vos opérations commerciales.",
+    productDesc: "Buroly combine des outils puissants pour simplifier vos opérations commerciales.",
     feature1Title: "Comptabilité",
     feature1Desc: "Automatisez la tenue des comptes et les rapports financiers avec précision.",
     feature2Title: "Gestion Fiscale",
@@ -99,8 +99,8 @@ export const translations = {
     service3Desc: "Solutions sur mesure pour répondre à vos besoins commerciaux spécifiques.",
     
     // About
-    aboutTitle: "À propos de StaffCompass",
-    aboutDesc: "Créé par des entrepreneurs pour des entrepreneurs, StaffCompass comprend les défis uniques des entreprises françaises.",
+    aboutTitle: "À propos de Buroly",
+    aboutDesc: "Créé par des entrepreneurs pour des entrepreneurs, Buroly comprend les défis uniques des entreprises françaises.",
     aboutContent: "Fondée en 2023, nous avons aidé des centaines d'entreprises françaises à rationaliser leurs opérations et à se concentrer sur la croissance. Notre équipe combine une expertise dans les réglementations commerciales françaises, la gestion des RH et la technologie pour fournir une solution qui fonctionne vraiment pour vous.",
     team: "Notre Équipe",
     
@@ -114,10 +114,10 @@ export const translations = {
     contactInfo: "Informations de Contact",
     address: "123 Rue de Rivoli, Paris, France",
     phone: "+33 1 23 45 67 89",
-    emailAddress: "contact@staffcompass.com",
+    emailAddress: "contact@Buroly.com",
     
     // Footer
-    copyright: "© 2025 StaffCompass. Tous droits réservés.",
+    copyright: "© 2025 Buroly. Tous droits réservés.",
     termsLink: "Conditions d'utilisation",
     privacyLink: "Politique de confidentialité",
   }

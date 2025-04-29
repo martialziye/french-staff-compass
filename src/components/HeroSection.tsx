@@ -1,4 +1,3 @@
-
 import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
@@ -64,9 +63,7 @@ export const HeroSection = () => {
         </div>
       </div>
       
-      <a href="#product" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hover:shadow-xl transition-all">
-        <ArrowDown className="w-5 h-5 text-accent animate-bounce" />
-      </a>
+
     </section>
   );
 };

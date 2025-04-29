@@ -23,7 +23,7 @@ export const LanguageToggle = () => {
       variant="ghost" 
       size="sm" 
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 font-mono text-sm"
+      className="flex items-center space-x-2 text-sm rounded-full hover:bg-accent/10"
     >
       <Languages 
         size={16} 

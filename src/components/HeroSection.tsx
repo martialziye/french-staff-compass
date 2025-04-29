@@ -1,57 +1,71 @@
 
 import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/button";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-mono font-bold leading-tight">
-              {t('heroTitle')}
+    <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-16 relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/5 z-0"></div>
+      
+      {/* Decorative shapes */}
+      <div className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-accent/10 blur-3xl"></div>
+      <div className="absolute bottom-1/3 left-[10%] w-72 h-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span className="gradient-text">{t('heroTitle')}</span>
             </h1>
-            <p className="text-lg md:text-xl max-w-lg">
+            <p className="text-lg md:text-xl max-w-lg text-foreground/80">
               {t('heroSubtitle')}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="bauhaus-button">
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a href="#contact" className="modern-button">
                 {t('heroCta')}
+                <ArrowRight className="ml-2 h-4 w-4" />
               </a>
               <a 
                 href="#product" 
-                className="font-mono font-bold px-6 py-3 border-2 border-black bg-white text-black transition-all duration-200 hover:bg-black hover:text-white inline-block"
+                className="modern-button-outline"
               >
                 {t('learnMore')}
               </a>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="aspect-square bg-secondary bauhaus-border relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center p-8">
-                <div className="w-full h-full relative">
-                  <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-accent"></div>
-                  <div className="absolute bottom-0 right-0 w-1/3 h-1/3 rounded-full bg-black"></div>
-                  <div className="absolute top-1/2 right-1/4 w-1/4 h-1/4 bg-white bauhaus-border"></div>
+          <div className="lg:col-span-5 relative">
+            <div className="relative z-10">
+              <div className="aspect-square relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-accent/50 to-blue-500/50">
+                <div className="absolute inset-0 backdrop-blur-sm p-8">
+                  <div className="w-full h-full relative bg-white/10 rounded-xl border border-white/20 flex items-center justify-center">
+                    <div className="absolute top-8 left-8 w-16 h-16 bg-white/30 backdrop-blur-md rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-md bg-accent"></div>
+                    </div>
+                    <div className="absolute bottom-12 right-12 w-24 h-24 bg-accent/90 backdrop-blur-md rounded-full"></div>
+                    <div className="w-32 h-32 bg-white/20 backdrop-blur-md rounded-full border border-white/30 flex items-center justify-center">
+                      <span className="font-bold text-white text-3xl">Buroly</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-2/3 h-1/2 bauhaus-border bg-white p-4">
-              <div className="h-full w-full flex items-center justify-center">
-                <span className="font-mono text-xl font-bold">StaffCompass</span>
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 glass-card p-6 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="font-bold text-2xl">2023</div>
+                  <div className="text-sm text-foreground/70">Launched</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <a href="#product" className="scroll-indicator">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+      <a href="#product" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hover:shadow-xl transition-all">
+        <ArrowDown className="w-5 h-5 text-accent animate-bounce" />
       </a>
     </section>
   );

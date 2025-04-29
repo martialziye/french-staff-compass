@@ -36,19 +36,19 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex justify-between items-center py-4">
-          <a href="#home" className="text-2xl font-mono font-bold">
-            StaffCompass
+        <div className="flex justify-between items-center py-5">
+          <a href="#home" className="text-2xl font-bold flex items-center">
+            <span className="gradient-text">Buroly</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-mono text-sm hover:text-accent transition-colors"
+                  className="font-medium text-sm hover:text-accent transition-colors"
                 >
                   {link.name}
                 </a>
@@ -90,13 +90,13 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white py-4 px-4 border-t">
+          <div className="md:hidden bg-white/95 backdrop-blur-md py-4 px-4 border-t rounded-b-2xl shadow-lg">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-mono text-base"
+                  className="font-medium text-base"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}

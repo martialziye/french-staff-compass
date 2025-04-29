@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,65 +7,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 210 45% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 0 80% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 245 80% 60%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 70%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215 20.2% 65.1%;
 
-    --radius: 0rem;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 0 80% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 245 80% 60%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 28%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 215 20.2% 65.1%;
   }
 }
 
@@ -79,11 +79,11 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-mono font-bold tracking-tight;
+    @apply font-sans font-bold tracking-tight;
   }
   
   section {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
   
   .container {
@@ -91,44 +91,39 @@
   }
 }
 
-/* Bauhaus style utility classes */
+/* Modern design utility classes */
 @layer components {
-  .bauhaus-grid {
+  .grid-layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
-  .bauhaus-button {
-    @apply font-mono font-bold px-6 py-3 bg-accent text-white transition-all duration-200 hover:bg-black hover:text-white inline-block;
+  .modern-button {
+    @apply font-sans font-medium px-6 py-3 bg-accent text-white rounded-full transition-all duration-300 hover:bg-accent/90 hover:shadow-lg shadow-accent/20 inline-flex items-center;
   }
   
-  .bauhaus-border {
-    @apply border-2 border-black;
-  }
-  
-  .scroll-indicator {
-    @apply fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50;
-    animation: bounce 2s ease-in-out infinite;
+  .modern-button-outline {
+    @apply font-sans font-medium px-6 py-3 border-2 border-accent text-accent rounded-full transition-all duration-300 hover:bg-accent hover:text-white hover:shadow-lg shadow-accent/20 inline-flex items-center;
   }
   
   .section-title {
-    @apply text-4xl md:text-6xl mb-8 font-mono;
+    @apply text-4xl md:text-5xl lg:text-6xl mb-6 font-sans;
     line-height: 1.1;
   }
   
-  .magic-hover {
-    @apply transition-all duration-300;
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
   
-  .magic-hover:hover {
-    transform: translateY(-4px);
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-500;
   }
   
   /* Scroll animation effects */
   .scroll-element {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
@@ -170,13 +165,29 @@
   
   .scroll-scale {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .scroll-scale.visible {
     opacity: 1;
     transform: scale(1);
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
